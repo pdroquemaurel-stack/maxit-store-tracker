@@ -4,7 +4,7 @@ on:
   schedule:
     # Tous les jours à 06h00 UTC (07h00 heure du Maroc en hiver, 08h00 en été).
     # Ajuste l'heure si besoin - format cron : minute heure jour mois jour_semaine
-  - cron: '30 14 * * *'
+  - cron: '01 16 * * *'
   workflow_dispatch:
     # Permet de lancer manuellement depuis l'onglet "Actions" de GitHub, pour tester
 
