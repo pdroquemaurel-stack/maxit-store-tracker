@@ -14,8 +14,8 @@ async function main() {
     result.price = details.price ?? 0;
     result.is_free = (details.price ?? 0) === 0;
     result.rating_avg = details.aggregateRating?.ratingValue ?? details.rating ?? null;
-    result.rating_count = details.aggregateRating?.ratingCount ?? details.ratingCount ?? null;
-    result.installs = details.installs ?? null;
+    result.rating_count = details.rating_counts?.total ?? null;
+    result.installs = details.downloads ?? null;
     result.version = details.version ?? null;
     result.description_short = (details.description ?? '').slice(0, 300);
   } catch (err) {
