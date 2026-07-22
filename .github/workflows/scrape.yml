@@ -51,3 +51,16 @@ jobs:
           git add maxit_store_history.xlsx
           git diff --quiet --cached || git commit -m "Scraping automatique $(date -u +%Y-%m-%d)"
           git push
+
+      - name: Publier le fichier Excel dans le dépôt de données public
+        env:
+          DATA_REPO_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
+        run: |
+          git clone https://x-access-token:${DATA_REPO_TOKEN}@github.com/pdroquemaurel-stack/maxit-store-data.git data-repo
+          cp maxit_store_history.xlsx data-repo/maxit_store_history.xlsx
+          cd data-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add maxit_store_history.xlsx
+          git diff --quiet --cached || git commit -m "Mise à jour automatique $(date -u +%Y-%m-%d)"
+          git push
