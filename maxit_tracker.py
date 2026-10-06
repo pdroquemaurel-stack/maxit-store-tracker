@@ -123,8 +123,8 @@ COUNTRIES = [
      "category_hint": "APPLICATION"},
 
     {"country_code": "BF", "country_name": "Burkina Faso",
-     "android_app_id": "com.orange.myorange.obf", "android_country_ovr": None,
-     "ios_app_id": 1553774707, "ios_country_code": None,
+     "android_app_id": "com.orange.myorange.ocm", "android_country_ovr": None,
+     "ios_app_id": 1116920093, "ios_country_code": None,
      "category_hint": "APPLICATION"},
 
     {"country_code": "BW", "country_name": "Botswana",
